@@ -1,0 +1,113 @@
+<!DOCTYPE HTML>
+<!--
+  Hyperspace by HTML5 UP
+  Packet Log Analytics page
+  Customized for Conatix
+-->
+<html>
+  <head>
+    <title>Conatix – Packet Log Analytics</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="title">Conatix Network Analytics</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="generic.html">Network Log Analytics</a></li>
+          <li><a href="elements.html" class="active">Packet Log Analytics</a></li>
+          <li><a href="security.html">Security Log Anayltics</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Main -->
+      <section id="main" class="wrapper style3 spotlights" style="background-color: #ffffff;">
+        <div class="inner">
+          <h1 class="major">Packet Log Analytics</h1>
+
+          <!-- Intro -->
+          <h2>Introduction</h2>
+          <p>
+            Packet logs provide a wire-level view of network activity. Each packet captures source/destination
+            addresses, ports, protocol, timing, sizes and flags—enough detail to reconstruct conversations,
+            baseline normal traffic, and catch abnormalities in real time. <strong>Conatix</strong> uses
+            deep-learning models to learn those baselines and surface anomalies such as scans, floods, unusual
+            protocol mixes, and lateral movement—without relying on brittle rule sets.
+          </p>
+
+          <!-- Dashboard Link -->
+          <p>
+            You can explore live packet analytics, anomaly trends, and protocol breakdowns in our interactive Grafana dashboard:
+          </p>
+          <p>
+            <a href="http://104.197.204.81:3000/d/d4601d53-eb17-48fb-b2f9-0d9a9c275d05/packet-dashboard?orgId=1"
+               target="_blank" class="button primary">View Packet Dashboard</a>
+          </p>
+
+          <!-- What Conatix focuses on -->
+          <h2>What We Analyze</h2>
+          <ul>
+            <li>Packet volumes and burst patterns across time windows.</li>
+            <li>Protocol distribution shifts (e.g., UDP spikes vs. TCP data/connect events).</li>
+            <li>TCP flag irregularities (<em>SYN, ACK, RST, FIN</em>) that indicate scans or resets.</li>
+            <li>5-tuple flow behaviors (source/destination IP/port + protocol) and deviations from baselines.</li>
+            <li>Latency/throughput outliers, fragmentation, and retransmission indicators.</li>
+          </ul>
+
+          <!-- Key Terms -->
+          <h2>Common Terms (Quick Reference)</h2>
+          <ul>
+            <li><strong>Packet:</strong> The smallest unit of network transmission; analyzed to detect fine-grained anomalies.</li>
+            <li><strong>Flow (5-tuple):</strong> Grouping of packets by <em>src IP, dst IP, src port, dst port, protocol</em>; core to behavior tracking.</li>
+            <li><strong>Protocol:</strong> Communication rules (e.g., <em>TCP, UDP, ICMP</em>). Different protocols imply different risks and performance traits.</li>
+            <li><strong>TCP Flags:</strong> Bits that describe connection state (<em>SYN, ACK, RST, FIN</em>); abnormal patterns are strong threat signals.</li>
+            <li><strong>Throughput:</strong> Effective data delivered per unit time; drops often indicate congestion or faults.</li>
+            <li><strong>Latency:</strong> Time for a packet to traverse the path; persistent spikes may reflect routing or capacity issues.</li>
+            <li><strong>Ports:</strong> Logical endpoints (e.g., 53/DNS, 443/HTTPS); unexpected open/active ports are common indicators.</li>
+            <li><strong>TTL:</strong> Time-to-Live prevents infinite routing; unusual TTL can hint at spoofing or atypical paths.</li>
+            <li><strong>MTU/MSS:</strong> Maximum frame/segment sizes; mismatches cause fragmentation and throughput penalties.</li>
+          </ul>
+
+          <!-- Example metric names you mentioned, explained plainly -->
+          <h2>How to Read Typical Packet Metrics</h2>
+          <ul>
+            <li><strong>Count:</strong> Total number of anomalies or events in the selected window.</li>
+            <li><strong>Heatmap of Anomalies by Day:</strong> Calendar-style density view for spotting recurring hotspots by date/hour.</li>
+            <li><strong>Top Anomaly Reasons:</strong> Ranked breakdown (e.g., <em>Port Scan</em>, <em>UDP Burst</em>, <em>Auth Failures</em>) to prioritize response.</li>
+            <li><strong>Packet Volume Over Time:</strong> Time-series of packets; spikes can indicate scans, floods or workload surges.</li>
+            <li><strong>UDPv4 / TCP_DATAv4 / TCP_CONNECTv4:</strong> Example protocol/event classes commonly tracked; values like <em>468 / 211 / 50</em> indicate counts within the time range.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>&copy; Conatix. All rights reserved.</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

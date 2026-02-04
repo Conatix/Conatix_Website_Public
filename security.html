@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<!--
+  Hyperspace by HTML5 UP
+  Security Log Analytics page
+  Customized for Conatix
+-->
+<html>
+  <head>
+    <title>Conatix – Security Log Analytics</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="title">Conatix Network Analytics</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="generic.html">Network Log Analytics</a></li>
+          <li><a href="elements.html">Packet Log Analytics</a></li>
+          <li><a href="security.html" class="active">Security Log Analytics</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Main -->
+      <section id="main" class="wrapper style3 spotlights" style="background-color: #ffffff;">
+        <div class="inner">
+          <h1 class="major">Security Log Analytics</h1>
+
+          <!-- Intro -->
+          <h2>Introduction</h2>
+          <p>
+            Security logs capture events related to authentication, firewall decisions, intrusion attempts,
+            and abnormal traffic patterns. They are one of the most critical data sources for defending
+            against cyber threats. <strong>Conatix</strong> ingests and analyzes these logs in real time,
+            using machine learning to detect patterns that indicate attacks, reconnaissance, or policy violations.
+          </p>
+
+          <!-- Dashboard Link -->
+          <p>
+            You can explore live security events, suspicious IP activity, and protocol breakdowns in our interactive Grafana dashboard:
+          </p>
+          <p>
+            <a href="http://104.197.204.81:3000/d/cf458540-3774-4f4d-86bf-e8bcd4954726/security-dashboard?orgId=1"
+               target="_blank" class="button primary">View Security Dashboard</a>
+          </p>
+
+          <!-- What Conatix focuses on -->
+          <h2>What We Monitor</h2>
+          <ul>
+            <li>Source and destination IP activity to identify attackers or compromised hosts.</li>
+            <li>TCP flag combinations to detect suspicious connection patterns.</li>
+            <li>High-volume or unusual event types such as repeated login failures or DNS floods.</li>
+            <li>Security event trends over time, segmented by protocol and severity.</li>
+            <li>Targeted destination ports that could indicate exploitation attempts.</li>
+          </ul>
+
+          <!-- Key Terms -->
+          <h2>Common Terms in Security Logs</h2>
+          <ul>
+            <li><strong>Top Source IPs:</strong> IP addresses sending the most suspicious or high-volume traffic. Often attackers, scanners, or infected internal devices.</li>
+            <li><strong>TCP Flags:</strong> Indicators of connection state. Examples include:
+              <ul>
+                <li><em>SYN</em>: Connection initiation request.</li>
+                <li><em>SYN+ACK</em>: Response acknowledging a connection request.</li>
+                <li><em>RST+ACK</em>: Connection reset, often unexpected.</li>
+                <li><em>FIN+ACK</em>: Graceful connection close.</li>
+                <li><em>PSH+ACK</em>: Immediate data push within an established connection.</li>
+              </ul>
+            </li>
+            <li><strong>Event Types:</strong> Categories of detected security activity, such as SYN floods, port scans, DNS queries, or authentication failures.</li>
+            <li><strong>DNS_Query:</strong> Logs when a DNS request is made; excessive or suspicious lookups can indicate malware C2 activity.</li>
+            <li><strong>Security Events Over Time:</strong> Time-series visualization of events to spot attack bursts or persistent low-level probing.</li>
+            <li><strong>Top Destination IPs & Ports:</strong> Targets of suspicious traffic; often servers or services that attackers are attempting to compromise.</li>
+          </ul>
+
+          <!-- Example metric context -->
+          <h2>How to Interpret Common Metrics</h2>
+          <ul>
+            <li><strong>Top Source IPs (All):</strong> Shows external and internal IP addresses generating the highest event counts. For example:
+              <ul>
+                <li>51.145.22.243 – 10 events</li>
+                <li>192.168.254.64 – 106 events</li>
+                <li>192.168.254.211 – 22 events</li>
+                <li>149.13.75.80 – 4 events</li>
+              </ul>
+            </li>
+            <li><strong>TCP Flag / Event Breakdown:</strong> Helps identify abnormal handshake patterns or aggressive connection resets. Example counts:
+              <ul>
+                <li>SYN – 42</li>
+                <li>SYN+ACK – 32</li>
+                <li>RST+ACK – 18</li>
+                <li>FIN+ACK – 46</li>
+                <li>DNS_Query – 12</li>
+              </ul>
+            </li>
+            <li><strong>Top Event Types:</strong> Shows which categories of events dominate the logs (e.g., SYN floods, suspicious DNS activity).</li>
+            <li><strong>Security Events Over Time:</strong> Charted to reveal when attacks occur, useful for correlating with incident timelines.</li>
+            <li><strong>Top Destination IPs & Ports:</strong> Highlights which systems or services are being targeted.</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>&copy; Conatix. All rights reserved.</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

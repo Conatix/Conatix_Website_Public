@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<!--
+  Hyperspace by HTML5 UP
+  Now used for "Product Description + Aims" page
+  Customized for Conatix
+-->
+<html>
+  <head>
+    <title>Conatix – Network Log Analytics</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  </head>
+  <body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="title">Conatix Network Analytics</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="generic.html" class="active">Network Log Analytics</a></li>
+          <li><a href="elements.html">Packet Log Analytics</a></li>
+          <li><a href="elements.html#join-us">Security Log Analytics</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Main Content -->
+      <section id="main" class="wrapper style3 spotlights" style="background-color: #ffffff;">
+        <div class="inner">
+          <h1 class="major">Network Log Analytics – Introduction & Aims</h1>
+          
+          <!-- Overview -->
+          <h2>Overview</h2>
+          <p>
+            Network logs are the lifeblood of modern IT infrastructure monitoring. They capture detailed records
+            of network activity, including connections, traffic patterns, errors, security events, and performance
+            metrics. Without analyzing these logs, organizations operate in the dark—unable to spot security breaches,
+            performance bottlenecks, or misconfigurations in time to take action.
+          </p>
+          <p>
+            <strong>Conatix</strong> specializes in processing these massive log streams in real-time, using 
+            machine learning and deep learning to detect anomalies automatically. Our platform empowers network and
+            security teams to respond to incidents faster, maintain compliance, and optimize system performance.
+          </p>
+
+          <!-- Network Terminology -->
+          <h2>Key Network Terminologies</h2>
+          <p>
+            Understanding certain network terms is essential for interpreting log data effectively. Below are a few
+            of the common terms you’ll encounter in Conatix analytics:
+          </p>
+          <ul>
+            <li><strong>Packet:</strong> The smallest unit of data transmitted across a network. Packet inspection helps identify malicious payloads or abnormal usage.</li>
+            <li><strong>Bandwidth:</strong> The maximum rate of data transfer, usually measured in Mbps or Gbps. Monitoring bandwidth ensures no service degradation.</li>
+            <li><strong>Latency:</strong> The delay in transmitting data between two points. High latency can indicate congestion or routing issues.</li>
+            <li><strong>Throughput:</strong> The actual amount of data transferred in a given period. It’s a key performance metric in network monitoring.</li>
+            <li><strong>Port:</strong> A logical endpoint for communication. Certain ports are common targets for security attacks.</li>
+            <li><strong>Protocol:</strong> A set of rules for data exchange (e.g., TCP, UDP, HTTP). Different protocols have different vulnerabilities and performance characteristics.</li>
+            <li><strong>Firewall Logs:</strong> Records of allowed or blocked traffic. Crucial for identifying intrusion attempts.</li>
+          </ul>
+
+          <!-- Approach -->
+          <h2>Our Approach</h2>
+          <p>
+            Conatix ingests network, packet, and security logs in real time using <strong>Kafka</strong> for 
+            streaming, processes them with <strong>machine learning models</strong> to detect unusual patterns,
+            and visualizes findings in <strong>Grafana</strong> dashboards. This combination allows proactive
+            detection of threats, compliance violations, and operational inefficiencies.
+          </p>
+
+          <!-- Grafana Dashboard -->
+          <h2>Explore the Network Dashboard</h2>
+          <p>
+            We provide interactive Grafana dashboards for real-time visualization of your network's health and
+            security posture. You can explore live network analytics, packet flow, anomaly alerts, and performance
+            metrics here:
+          </p>
+          <p>
+            <a href="http://104.197.204.81:3000/d/d4b74032-b13f-4324-8fcb-c2c89e1eeaf3/network-dashaboard?orgId=1" target="_blank" class="button primary">
+              View Live Network Dashboard
+            </a>
+          </p>
+          <div style="text-align: center; margin: 2em 0;">
+            <img src="images/diagrams/grafana_network_dashboard.png" alt="Grafana Network Dashboard Preview" style="max-width: 80%; height: auto;">
+          </div>
+
+          <!-- Impact -->
+          <h2>Impact</h2>
+          <p>
+            By leveraging AI-driven analysis of network logs, Conatix helps organizations:
+          </p>
+          <ul>
+            <li>Detect intrusions and anomalies before they cause damage</li>
+            <li>Optimize network performance and reduce downtime</li>
+            <li>Maintain compliance with industry regulations</li>
+            <li>Improve the efficiency of IT and security teams</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="wrapper alt">
+      <div class="inner">
+        <ul class="menu">
+          <li>&copy; Conatix. All rights reserved.</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
